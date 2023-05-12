@@ -1,0 +1,38 @@
+Name,Latitude,Longitude,Employees,Sector
+Google,37.422,-122.0841,135301,Technology
+Amazon,47.6062,-122.3321,1335000,Retail
+Apple Inc.,37.3324,-122.0308,147000,Technology
+Walmart Inc.,36.3729,-94.2088,2300000,Retail
+The Walt Disney Company,33.8121,-117.919,203000,Entertainment
+Johnson & Johnson,40.7437,-74.0276,135100,Pharmaceutical
+Ford Motor Company,42.3223,-83.1763,190000,Automotive
+ExxonMobil Corp.,32.7767,-96.797,72000,Oil and Gas
+General Electric Co.,42.3601,-71.0589,205000,Conglomerate
+JPMorgan Chase & Co.,40.7128,-74.006,259000,Finance
+The Home Depot Inc.,33.8034,-84.4251,500000,Retail
+Intel Corporation,37.3875,-121.9636,110600,Technology
+Microsoft Corporation,47.6395,-122.1284,181000,Technology
+Procter & Gamble Co.,39.1435,-84.5086,100000,Consumer Goods
+Boeing Co.,47.6062,-122.3321,143000,Aerospace and Defense
+IBM Corporation,41.122,-73.484,350600,Technology
+Pfizer Inc.,40.7594,-73.9794,78000,Pharmaceutical
+Johnson Controls International plc,43.0389,-87.9065,105000,Conglomerate
+Chevron Corporation,37.7749,-122.4194,48000,Oil and Gas
+The Coca-Cola Company,33.7489,-84.3881,80000,Consumer Goods
+"The Goldman Sachs Group, Inc.",40.7128,-74.006,41500,Finance
+The Producers Co-op,28.0288,-97.0591,370,Agriculture
+Lockheed Martin Corporation,39.0046,-76.8755,110000,Aerospace and Defense
+The Boeing Company,47.6101,-122.3312,161133,Aerospace and Defense
+Intel Corporation,37.3875,-121.9634,110600,Technology
+ExxonMobil Corporation,32.7758,-96.7967,72000,Oil and Gas
+General Electric Company,41.3083,-72.9279,174000,Conglomerate
+McDonald's Corporation,41.8819,-87.6278,210000,Restaurant
+"The Home Depot, Inc.",33.8034,-84.3963,415000,Retail
+Walmart Inc.,36.3728,-94.2088,2200000,Retail
+Honeywell International Inc.,40.7306,-74.0051,110000,Conglomerate
+The Walt Disney Company,33.8121,-117.919,203000,Entertainment
+The Coca-Cola Company,33.7489,-84.3881,80000,Consumer Goods
+"Cisco Systems, Inc.",37.4087,-121.9148,77000,Technology
+The Coca-Cola Company,33.7489,-84.3881,80000,Consumer Goods
+JPMorgan Chase & Co.,40.7128,-74.006,256105,Finance
+FedEx Corporation,35.0428,-89.9811,600000,Delivery and Logistics
