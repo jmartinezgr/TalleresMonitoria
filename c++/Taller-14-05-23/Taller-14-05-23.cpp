@@ -15,10 +15,10 @@ struct Producto{  //Se crea la estructura del producto
 	float Descuento;
 };
 
-bool ComprobarFechaRepetida(vector<Producto> ListaDeProductos, string fecha, int codigo){ //Funcion para comprobar registros de un mismo producto en la misma fecha
+bool ComprobarFechaRepetida(vector<Producto> Productos, string fecha, int codigo){ //Funcion para comprobar registros de un mismo producto en la misma fecha
 	
-	for(int i = 0; i < ListaDeProductos.size(); i++ ){
-		if(ListaDeProductos[i].FechaDeCompra == fecha && ListaDeProductos[i].CodigoUnico == codigo){
+	for(int i = 0; i < Productos.size(); i++ ){
+		if(Productos[i].FechaDeCompra == fecha && Productos[i].CodigoUnico == codigo){
 			return true;
 		}
 	}
@@ -26,7 +26,7 @@ bool ComprobarFechaRepetida(vector<Producto> ListaDeProductos, string fecha, int
 	return false;
 }
 
-Producto SolicitarInformacion(vector<Producto> ListaDeProductos){ //Funcion que solicita la informacion del nuevo producto
+Producto SolicitarInformacion(vector<Producto> Productos){ //Funcion que solicita la informacion del nuevo producto
 	
 	Producto ProductoAuxiliar;
 	while(true){
@@ -53,7 +53,7 @@ Producto SolicitarInformacion(vector<Producto> ListaDeProductos){ //Funcion que 
 			}
 		}
 		
-		if(ComprobarFechaRepetida(ListaDeProductos, ProductoAuxiliar.FechaDeCompra, ProductoAuxiliar.CodigoUnico)){ //Se llama a la funcion para comprobar fecha repetida
+		if(ComprobarFechaRepetida(Productos, ProductoAuxiliar.FechaDeCompra, ProductoAuxiliar.CodigoUnico)){ //Se llama a la funcion para comprobar fecha repetida
 			cout << "============================================" << endl;
 			cout << "Esta Fecha ya ha sido registrada para este producto, vuelve a hacer el registro" << endl;
 			cout << "============================================" << endl;
@@ -75,10 +75,10 @@ Producto SolicitarInformacion(vector<Producto> ListaDeProductos){ //Funcion que 
 	return ProductoAuxiliar; //Se retorna un producto para agregar a la lista de registros
 }
 
-bool ComprobarExistenciaCodigo(vector<Producto> ListaDeProductos, int codigo){ //Funcion para comprobar si un codigo existe en la lista de productos
+bool ComprobarExistenciaCodigo(vector<Producto> Productos, int codigo){ //Funcion para comprobar si un codigo existe en la lista de productos
 	
-	for(int i = 0; i < ListaDeProductos.size(); i++ ){
-		if(ListaDeProductos[i].CodigoUnico == codigo){
+	for(int i = 0; i < Productos.size(); i++ ){
+		if(Productos[i].CodigoUnico == codigo){
 			return true;
 		}
 	}
@@ -117,14 +117,14 @@ void imprimirInfo(char tipo, Producto productoAuxiliar){ //Funcion que imprime l
 
 //Funcion principal
 int main(){ 
-	vector<Producto> ListaDeProductos;
+	vector<Producto> Productos;
 	char seguir;
 	
 	for(int i = 0; i < 20  ; i++){ //Ciclo que agrega los nuevos productos hasta un maximo de 20
 		
-		ListaDeProductos.push_back(SolicitarInformacion(ListaDeProductos));	
+		Productos.push_back(SolicitarInformacion(Productos));	
 		
-		imprimirInfo('R', ListaDeProductos[i]);
+		imprimirInfo('R', Productos[i]);
 		
 		cout << "Deseas continuar ingresando datos(S/N): " ;
 		cin >> seguir;
@@ -151,7 +151,7 @@ int main(){
         		cin >> codigo;
         		cout << "============================================" << endl;
 			
-				if(ComprobarExistenciaCodigo(ListaDeProductos,codigo)){
+				if(ComprobarExistenciaCodigo(Productos,codigo)){
 					break;
 				}
 				else{
@@ -164,9 +164,9 @@ int main(){
 			break;
 		}
 		
-		for(int i=0; i <= ListaDeProductos.size(); i++){ //Ciclo para encontrar el nombre del producto
-			if(ListaDeProductos[i].CodigoUnico == codigo){
-				Nombre = ListaDeProductos[i].Nombre;
+		for(int i=0; i <= Productos.size(); i++){ //Ciclo para encontrar el nombre del producto
+			if(Productos[i].CodigoUnico == codigo){
+				Nombre = Productos[i].Nombre;
 			}
 		}
 		
@@ -180,11 +180,11 @@ int main(){
 		<< setw(13) << " Valor Venta" << setw(2) << "|" << setw(11) << "Descuento" << setw(2) << "|"<<setw(12) << "% Utilidad" << setw(2) << endl;
 		cout << "===========================================================================" << endl;
 		
-		for(int i=0; i <= ListaDeProductos.size(); i++){ //Ciclo que encuentra en la lista de productos los registros con el codigo solicitado
-			if(ListaDeProductos[i].CodigoUnico == codigo){
-				imprimirInfo('U',ListaDeProductos[i]);
+		for(int i=0; i <= Productos.size(); i++){ //Ciclo que encuentra en la lista de productos los registros con el codigo solicitado
+			if(Productos[i].CodigoUnico == codigo){
+				imprimirInfo('U',Productos[i]);
 				cout << "===========================================================================" << endl;
-				valorPromedio = valorPromedio+ListaDeProductos[i].PrecioDeVenta;
+				valorPromedio = valorPromedio+Productos[i].PrecioDeVenta;
 				cont = cont+1;
 			}
 			
